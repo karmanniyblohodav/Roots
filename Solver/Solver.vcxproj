@@ -131,6 +131,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BruteForceMethod.h" />
+    <ClInclude Include="DichotomyMethod.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BruteForceMethod.cpp" />
+    <ClCompile Include="DichotomyMethod.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
