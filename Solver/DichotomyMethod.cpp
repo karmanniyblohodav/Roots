@@ -1,14 +1,14 @@
 #include "DichotomyMethod.h"
 
-double DichotomyMethod::GetValue(double leftBound, double rightBound, const double epsilon, const function<double(const double)>& func) const {
+double DichotomyMethod::GetValue(double leftBound, double rightBound,const double step, const double epsilon, const std::function<double(const double)>&func) const {
 
-	double middleInterval;
+	Solver::GetValue(leftBound, rightBound, step, func);
 
 	while (rightBound - leftBound > epsilon) {
 
-		middleInterval = (leftBound + rightBound) / 2.0;
+		auto middleInterval = (leftBound + rightBound) / 2.0;
 
-		if (func(middleInterval) == 0)
+		if (std::abs(func(middleInterval)) <= epsilon)
 			return middleInterval;
 
 		else if (func(leftBound) * func(middleInterval) < 0)

@@ -1,12 +1,12 @@
 #pragma once
 #include <functional>
-using namespace std;
+#include "Solver.h"
 
-class BruteForceMethod
+class BruteForceMethod : public Solver
 {
 public:
 
-	double GetValue(double leftBound, double rightBound, const double step, const function<double(const double)>& func) const;
+	double GetValue(double leftBound, double rightBound, const double step, const std::function<double(const double)>& func) const;
 
 };
 

@@ -1,13 +1,12 @@
 #pragma once
 #include <functional>
-#include <cmath>
-using namespace std;
+#include "Solver.h"
 
-class DichotomyMethod
+class DichotomyMethod : public Solver
 {
 public:
 
-	double GetValue(double leftBound, double rightBound, const double epsilon, const function<double(const double)>& func) const;
+	double GetValue(double leftBound, double rightBound, const double step, const double epsilon, const std::function<double(const double)>& func) const;
 
 };
 

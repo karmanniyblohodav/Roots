@@ -1,21 +1,23 @@
 #include "BruteForceMethod.h"
-using namespace std;
 
-double BruteForceMethod::GetValue(double leftBound, double rightBound, const double step, const function<double(const double)>& func) const {
+double BruteForceMethod::GetValue(double leftBound, double rightBound, const double step, const std::function<double(const double)>& func) const {
 
-    double minDifference = std::numeric_limits<double>::max();
+    Solver::GetValue(leftBound, rightBound, step, func);
+
+    double minDifference = std::abs(func(leftBound));
     double root = leftBound;
 
     while (leftBound <= rightBound) {
-        if (fabs(func(leftBound)) < minDifference) {
-            minDifference = fabs(func(leftBound));
+        
+        auto y = func(leftBound);
+
+        if (std::abs(y) < minDifference) {
+            minDifference = std::abs(y);
             root = leftBound;
         }
 
         leftBound += step;
     }
-
-    
 
     return root;
 }
