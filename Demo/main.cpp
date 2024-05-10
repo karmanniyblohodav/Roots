@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cmath>
-#include <C:\Учеб\ТКИ-141-2\Roots\Solver\DichotomyMethod.h>
-#include <C:\Учеб\ТКИ-141-2\Roots\Solver\BruteForceMethod.h>
-#include <C:\Учеб\ТКИ-141-2\Roots\Solver\Solver.h>
+#include "..\Solver\DichotomyMethod.h"
+#include "..\Solver\BruteForceMethod.h"
+#include "..\Solver\Solver.h"
 using namespace std;
 
 int main() {
