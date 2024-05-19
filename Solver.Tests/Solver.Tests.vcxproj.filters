@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Solver.Tests.cpp">
+    <ClCompile Include="BruteForceMethod.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DichotomyMethod.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
